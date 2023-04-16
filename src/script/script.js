@@ -17,11 +17,22 @@ And Purchase`
 let speed = 100
 function writeText() {
     textEl.innerText = text.slice(0,index)
+    textEl.classList.add('display-4')
     if(index < text.length){
         index++
         setTimeout(writeText, speed)
     }
+    else{
+        setTimeout(decreaseText, speed)
+    }
  }
+function decreaseText() {
+textEl.innerText = text.slice(0,index)
+if(index > 0){
+    index--
+    setTimeout(decreaseText, speed)
+}
+}
 writeText()
 
 function displayClothes(data){
