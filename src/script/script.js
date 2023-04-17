@@ -76,3 +76,21 @@ function displaytechnic(data){
 }
 
 
+
+
+
+const burger = document.getElementById('burger')
+burger.addEventListener('click', ()=>{
+    const menu = document.getElementById('menu')
+    menu.classList.toggle('display')
+})
+
+const logIn = document.getElementById('logIn');
+const logInDiv = document.getElementById('logInDiv');
+logIn.addEventListener('click', ()=>{
+    logInDiv.classList.toggle('display')
+})
+const signIn = document.getElementById('signIn');
+signIn.addEventListener('click', (e)=>{
+    logInDiv.classList.add('display')
+})
