@@ -143,6 +143,13 @@ padding: 20px;
 @media (min-width: 500px) {
     #menu{
         width: 250px;
+        height: 100vh;
+        padding: 20px;
+        right: 0;
+    }
+    #cartItems{
+        width: 250px;
+        height: 100vh;
         padding: 20px;
         right: 0;
     }
@@ -157,23 +164,28 @@ padding: 20px;
     #burger{
         display: none;
     }
+    #menu{
+        display: none;
+    }
     
 }
 .logIn {
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 100vh;
     top: 0;
     background-color: rgba(0, 0, 0, 0.5); 
 }
   
-  #logInChild {
+#logInChild {
     background-color: #EEEEEE;
     padding: 100px;
     border: 1px solid black;
     border-radius: 8px;
-  }
-  #logIn{
+    margin:auto;
+    height: 70%;
+}
+#logIn{
     border: 1px solid black;
 }
 
@@ -183,4 +195,43 @@ button{
     background-color: transparent;
     border: none;
     border-bottom: 1px solid black;
+}
+
+@media (max-width:900px) {
+    #logInChild {
+       width: 50%;
+    }
+}
+@media (max-width:600px) {
+    #logInChild {
+       width: 80%;
+    }
+}
+@media (max-width:400px) {
+    #logInChild {
+       width: 100%;
+    }
+}
+
+.shopCart{
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: white;
+    width: 100vw;
+    background-color:#F0F0F0 ;
+}
+#removeBtn{
+    width: 100%;
+    border: 1px solid black;
+    margin:0;
+}
+.purchase{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+.purchase:hover{
+    color: black;
 }

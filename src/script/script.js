@@ -40,12 +40,26 @@ function displayClothes(data){
     console.log(clothesData);
     const container = document.getElementById('clothes');
     clothesData.forEach(item => {
-        container.innerHTML += `
+        const itemDiv = document.createElement('div');
+        itemDiv.innerHTML = `
         <div>
-            <img src="${item.image}" id="itemImg" class="containerImg">
+            <a href="oneProduct.html?${item.id}">
+                <img src="${item.image}" id="itemImg" class="containerImg">
+            </a>
             <p>${item.price}$</p>
         </div>
         `;
+        itemDiv.addEventListener('click',()=>{
+            localStorage.setItem('id',item.id)
+            localStorage.setItem('category',item.category)
+            localStorage.setItem('image',item.image)
+            localStorage.setItem('price',item.price)
+            const array = item.rating;
+            localStorage.setItem('rating',JSON.stringify(array))
+            localStorage.setItem('title',item.title)
+            localStorage.setItem('description',item.description)
+        });
+        container.appendChild(itemDiv);
     });
 }
 function displayJewelry(data){
@@ -53,12 +67,26 @@ function displayJewelry(data){
     console.log(jewelryData);
     const container = document.getElementById('jewelry');
     jewelryData.forEach(item => {
-        container.innerHTML += `
+        const itemDiv = document.createElement('div');
+        itemDiv.innerHTML = `
         <div>
-            <img src="${item.image}" id="itemImg" class="containerImg">
+            <a href="oneProduct.html?${item.id}">
+                <img src="${item.image}" id="itemImg" class="containerImg">
+            </a>
             <p>${item.price}$</p>
         </div>
         `;
+        itemDiv.addEventListener('click',()=>{
+            localStorage.setItem('id',item.id)
+            localStorage.setItem('category',item.category)
+            localStorage.setItem('image',item.image)
+            localStorage.setItem('price',item.price)
+            const array = item.rating;
+            localStorage.setItem('rating',JSON.stringify(array))
+            localStorage.setItem('title',item.title)
+            localStorage.setItem('description',item.description)
+        });
+        container.appendChild(itemDiv);
     });
 }
 function displaytechnic(data){
@@ -66,12 +94,24 @@ function displaytechnic(data){
     console.log(technicData);
     const container = document.getElementById('technic');
     technicData.forEach(item => {
-        container.innerHTML += `
-        <div>
-            <img src="${item.image}" id="itemImg" class="containerImg">
+        const itemDiv = document.createElement('div');
+        itemDiv.innerHTML = `
+            <a href="oneProduct.html?${item.id}">
+                <img src="${item.image}" id="itemImg" class="containerImg">
+            </a>
             <p>${item.price}$</p>
-        </div>
         `;
+        itemDiv.addEventListener('click',()=>{
+            localStorage.setItem('id',item.id)
+            localStorage.setItem('category',item.category)
+            localStorage.setItem('image',item.image)
+            localStorage.setItem('price',item.price)
+            const array = item.rating;
+            localStorage.setItem('rating',JSON.stringify(array))
+            localStorage.setItem('title',item.title)
+            localStorage.setItem('description',item.description)
+        });
+        container.appendChild(itemDiv);
     });
 }
 
@@ -84,6 +124,11 @@ burger.addEventListener('click', ()=>{
     const menu = document.getElementById('menu')
     menu.classList.toggle('display')
 })
+const shopCart = document.getElementById('shopCart')
+shopCart.addEventListener('click', ()=>{
+    const cartItems = document.getElementById('cartItems')
+    cartItems.classList.toggle('display')
+})
 
 const logIn = document.getElementById('logIn');
 const logInDiv = document.getElementById('logInDiv');
@@ -94,3 +139,4 @@ const signIn = document.getElementById('signIn');
 signIn.addEventListener('click', (e)=>{
     logInDiv.classList.add('display')
 })
+
