@@ -42,7 +42,7 @@ function displayClothes(data){
     clothesData.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.innerHTML = `
-        <div>
+        <div id="imageDiv">
             <a href="oneProduct.html?${item.id}">
                 <img src="${item.image}" id="itemImg" class="containerImg">
             </a>
@@ -59,6 +59,7 @@ function displayClothes(data){
             localStorage.setItem('title',item.title)
             localStorage.setItem('description',item.description)
         });
+       
         container.appendChild(itemDiv);
     });
 }

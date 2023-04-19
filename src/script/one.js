@@ -29,6 +29,7 @@ const data = JSON.parse(rating)
 const rate = data.rate
 const count = data.count
 const price =localStorage.getItem('price')
+
 const description =localStorage.getItem('description')
 
 
@@ -55,6 +56,12 @@ function showItemInfo(){
 showItemPic()
 showItemInfo()
 
+
+const priceString = localStorage.getItem('price');
+const priceNumber = parseInt(priceString);
+const tip = priceNumber * 10 / 100
+const total = priceNumber + tip
+
 const cartBtn = document.getElementById('cartBtn')
 cartBtn.addEventListener('click', ()=>{
     const cartItems = document.getElementById('cartItems')
@@ -65,9 +72,14 @@ cartBtn.addEventListener('click', ()=>{
         </div>
         <div class="col-6">
             <p>${price}$</p>
-            <button id="removeBtn">Remove</button>
         </div>
         <div class="mt-5">
+            <button class="mx-auto d-block" id="removeBtn">Remove</button>
+        </div>
+        <div class="mt-5">
+            <hr class="mt-5">
+            <p>Commission: ${tip}$</p>
+            <p>Total: ${total}$</p>
             <a href="payment.html" class="purchase">Purchase</a>
         </div>
     </div>

@@ -1,0 +1,25 @@
+table{
+    width: 70%;
+    border: 1px solid black;
+}
+
+th:nth-child(1){
+    border-bottom: 1px solid black;
+}
+
+@media (min-width: 768px) {
+    #purchasedItem{
+        width: 50%;
+        margin-top: 6em;
+       }
+}
+.paymentDiv{
+    display: flex;
+    flex-direction: row;
+ }
+@media (max-width:768px) {
+ .paymentDiv{
+    display: flex;
+    flex-direction: column;
+ }
+ }
