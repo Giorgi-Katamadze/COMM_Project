@@ -141,3 +141,29 @@ signIn.addEventListener('click', (e)=>{
     logInDiv.classList.add('display')
 })
 
+const boxes = document.querySelectorAll('.text');
+window.addEventListener('scroll',checkBoxes)
+checkBoxes()
+function checkBoxes() {
+    const triggerBottom = window.innerHeight / 5 * 4
+    console.log(triggerBottom)
+    boxes.forEach(box => {
+        const boxTop = box.getBoundingClientRect().top
+
+        if (boxTop < triggerBottom){
+            box.classList.add('show')
+        }
+       
+    })
+
+  }
+const box = document.querySelector('.header2');
+window.addEventListener('scroll',checkBox)
+checkBox()
+function checkBox() {
+    const triggerBottom = window.innerHeight / 5 * 4
+    const boxTop = box.getBoundingClientRect().top
+    if (boxTop < triggerBottom){
+        box.classList.add('show2')
+    }
+  }

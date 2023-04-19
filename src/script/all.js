@@ -11,7 +11,7 @@ function displayItems(data){
     data.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.innerHTML = `
-        <div class="d-flex my-5 py-5 container allprod">
+        <div class="d-flex container allprod col-8">
             <div class="d-flex justify-content-center col-6 imgDiv">
                 <div>
                     <img src="${item.image}" class="containerImg">

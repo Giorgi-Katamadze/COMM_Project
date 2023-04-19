@@ -130,16 +130,6 @@ footer{
 .CR{
     background-color: #F0F0F0;
 }
-.content{
-border: 1px solid black;
-padding: 20px;
-}
-@media (min-width: 768px) {
-.header{
-    transform: rotate(-90deg);
-    letter-spacing: 10px;
-}
-}
 @media (min-width: 500px) {
     #menu{
         width: 250px;
@@ -236,6 +226,72 @@ button{
     color: black;
 }
 
-
+/* .content{
+    border: 1px solid black;
+    padding: 76px;
+    position: relative;
+    overflow: hidden;
+} */
+.content{
+    border: 1px solid black;
+    padding: 20px;
+    }
+/* #clothes {
+    position: absolute; 
+    top: 10%; 
+    left: 4%; 
+    animation: move-image 10s linear infinite; 
+  } */
   
+  /* @keyframes move-image {
+    0% {
+      left:4%; 
+    }
+    50% {
+        left: -65%;
+    }
+    100% {
+      right: 100%;
+    }
+  } */
+.header{
+    transform: translateX(-150%);
+    letter-spacing: 10px;
+    transition: transform ease 0.5s;
+  }
+
+.show{
+    transform: translateX(0) rotate(-90deg);
+  }
+
+
+.header2{
+    transform: translateX(150%);
+    letter-spacing: 10px;
+    transition: transform ease 0.5s;
+}
+.show2{
+    transform: translateX(0) rotate(90deg);
+}
+@media (max-width: 768px) {
+    .header{
+        transform: translateX(-150%);
+        letter-spacing: 10px;
+        transition: transform ease 0.5s;
+      }
+    
+    .show{
+        transform: translateX(0);
+      }
+    
+    
+    .header2{
+        transform: translateX(150%);
+        letter-spacing: 10px;
+        transition: transform ease 0.5s;
+    }
+    .show2{
+        transform: translateX(0);
+    }
+    }
   
