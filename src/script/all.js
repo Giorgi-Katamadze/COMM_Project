@@ -11,7 +11,7 @@ function displayItems(data){
     data.forEach(item => {
         const itemDiv = document.createElement('div');
         itemDiv.innerHTML = `
-        <div class="d-flex container allprod col-8">
+        <div class="d-flex container allprod pb-5 gap-2 my-5 col-8">
             <div class="d-flex justify-content-center col-6 imgDiv">
                 <div>
                     <img src="${item.image}" class="containerImg">
@@ -67,4 +67,17 @@ const shopCart = document.getElementById('shopCart')
 shopCart.addEventListener('click', ()=>{
     const cartItems = document.getElementById('cartItems')
     cartItems.classList.toggle('display')
+})
+const signUpDiv = document.getElementById('signUpDiv')
+const signUp = document.getElementById('signUp')
+signUp.addEventListener('click', ()=>{
+   signUpDiv.classList.toggle('display')
+})
+const signUpMenu = document.getElementById('signUpMenu')
+ signUpMenu.addEventListener('click', ()=>{
+    signUpDiv.classList.toggle('display')
+})
+const logInMenu = document.getElementById('logInMenu');
+logInMenu.addEventListener('click', ()=>{
+    logInDiv.classList.toggle('display')
 })

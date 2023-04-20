@@ -7,6 +7,10 @@ a{
     color: black;
 }
 
+.allprod{
+    border-bottom: 1px solid black;
+}
+
 @media (max-width: 500px) {
     .button{
         margin: 0 auto;

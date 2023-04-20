@@ -3,7 +3,11 @@ shopCart.addEventListener('click', ()=>{
     const cartItems = document.getElementById('cartItems')
     cartItems.classList.toggle('display')
 })
-
+const signUpDiv = document.getElementById('signUpDiv')
+const signUp = document.getElementById('signUp')
+signUp.addEventListener('click', ()=>{
+   signUpDiv.classList.toggle('display')
+})
 
 const burger = document.getElementById('burger')
 burger.addEventListener('click', ()=>{
@@ -14,7 +18,14 @@ const signIn = document.getElementById('signIn');
 signIn.addEventListener('click', (e)=>{
     logInDiv.classList.add('display')
 })
-
+const signUpMenu = document.getElementById('signUpMenu')
+ signUpMenu.addEventListener('click', ()=>{
+    signUpDiv.classList.toggle('display')
+})
+const logInMenu = document.getElementById('logInMenu');
+logInMenu.addEventListener('click', ()=>{
+    logInDiv.classList.toggle('display')
+})
 const logIn = document.getElementById('logIn');
 const logInDiv = document.getElementById('logInDiv');
 logIn.addEventListener('click', ()=>{
@@ -47,7 +58,7 @@ function showItemInfo(){
     <h6>${category}</h6>
     </div>
     <div>
-    <h2>${price}</h2>
+    <h2>${price}$</h2>
     <p>Rate: ${rate} </br> Count: ${count}</p>
     </div>
     <p>${description}</p>

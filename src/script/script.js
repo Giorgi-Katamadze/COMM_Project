@@ -136,6 +136,22 @@ const logInDiv = document.getElementById('logInDiv');
 logIn.addEventListener('click', ()=>{
     logInDiv.classList.toggle('display')
 })
+const logInMenu = document.getElementById('logInMenu');
+logInMenu.addEventListener('click', ()=>{
+    logInDiv.classList.toggle('display')
+})
+ const signUpDiv = document.getElementById('signUpDiv')
+ const signUp = document.getElementById('signUp')
+ signUp.addEventListener('click', ()=>{
+    signUpDiv.classList.toggle('display')
+})
+const signUpMenu = document.getElementById('signUpMenu')
+ signUpMenu.addEventListener('click', ()=>{
+    signUpDiv.classList.toggle('display')
+})
+
+
+
 const signIn = document.getElementById('signIn');
 signIn.addEventListener('click', (e)=>{
     logInDiv.classList.add('display')

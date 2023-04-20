@@ -8,7 +8,19 @@ shopCart.addEventListener('click', ()=>{
     const cartItems = document.getElementById('cartItems')
     cartItems.classList.toggle('display')
 })
-
+const signUpDiv = document.getElementById('signUpDiv')
+const signUp = document.getElementById('signUp')
+signUp.addEventListener('click', ()=>{
+   signUpDiv.classList.toggle('display')
+})
+const signUpMenu = document.getElementById('signUpMenu')
+ signUpMenu.addEventListener('click', ()=>{
+    signUpDiv.classList.toggle('display')
+})
+const logInMenu = document.getElementById('logInMenu');
+logInMenu.addEventListener('click', ()=>{
+    logInDiv.classList.toggle('display')
+})
 const logIn = document.getElementById('logIn');
 const logInDiv = document.getElementById('logInDiv');
 logIn.addEventListener('click', ()=>{
