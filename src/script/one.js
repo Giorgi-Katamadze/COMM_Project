@@ -22,6 +22,10 @@ const signUpMenu = document.getElementById('signUpMenu')
  signUpMenu.addEventListener('click', ()=>{
     signUpDiv.classList.toggle('display')
 })
+const signUpButton = document.getElementById('signUpButton')
+signUpButton.addEventListener('click', ()=>{
+   signUpDiv.classList.toggle('display')
+})
 const logInMenu = document.getElementById('logInMenu');
 logInMenu.addEventListener('click', ()=>{
     logInDiv.classList.toggle('display')

@@ -145,6 +145,10 @@ logInMenu.addEventListener('click', ()=>{
  signUp.addEventListener('click', ()=>{
     signUpDiv.classList.toggle('display')
 })
+ const signUpButton = document.getElementById('signUpButton')
+ signUpButton.addEventListener('click', ()=>{
+    signUpDiv.classList.toggle('display')
+})
 const signUpMenu = document.getElementById('signUpMenu')
  signUpMenu.addEventListener('click', ()=>{
     signUpDiv.classList.toggle('display')
