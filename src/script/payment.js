@@ -34,6 +34,10 @@ const signIn = document.getElementById('signIn');
 signIn.addEventListener('click', (e)=>{
     logInDiv.classList.add('display')
 })
+const submit = document.getElementById('submit')
+submit.addEventListener('click', () => {
+    window.location.href = 'index.html'
+})
 
 const title =localStorage.getItem('title')
 const category =localStorage.getItem('category')
@@ -72,3 +76,4 @@ function showItem(){
 }
 
 showItem()
+
